@@ -46,31 +46,40 @@ It initializes the sample data and queries additional samples based on the uncer
 If the uncertainty is below a specified threshold, the next sample is added to the dataset; otherwise, the process queries the next sample.
 
 ## Usage
+
 You can run the active learning process by setting the following parameters:
 
 -alpha_true: The true shape parameter for the Gamma distribution.
+
 -beta_true: The true scale parameter for the Gamma distribution.
+
 -initial_samples: The initial number of samples to start with.
+
 -total_samples: The total number of samples to collect.
+
 -uncertainty_threshold: The threshold for deciding whether to include the next sample based on uncertainty.
 
 
-## Example
-python
-Copy code
 
 # Parameters for simulation
+
 alpha_true = 0.8
+
 beta_true = 1.0
+
 initial_samples = 100
+
 total_samples = 500
+
 uncertainty_threshold = 1.0
 
 # Run active learning
 heights = active_learning(initial_samples, total_samples, uncertainty_threshold, alpha_true, beta_true)
 
 # Final estimation after active learning
+
 estimated_alpha, estimated_beta = gamma_mle(heights)
+
 print(f"Final Estimated Parameters: Alpha = {estimated_alpha:.4f}, Beta = {estimated_beta:.4f}")
 
 
