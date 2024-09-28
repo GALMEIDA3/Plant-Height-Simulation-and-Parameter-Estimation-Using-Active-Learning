@@ -72,15 +72,15 @@ heights = active_learning(initial_samples, total_samples, uncertainty_threshold,
 # Final estimation after active learning
 estimated_alpha, estimated_beta = gamma_mle(heights)
 print(f"Final Estimated Parameters: Alpha = {estimated_alpha:.4f}, Beta = {estimated_beta:.4f}")
-Visualization
-At the end of the simulation, the code visualizes the histogram of the simulated plant heights and overlays the fitted Gamma probability density function.
+
 
 ## Results
 The code prints:
 
-Final estimated parameters of the Gamma distribution.
-The final Fisher Information Matrix.
-The final uncertainty measure.
+1. Final estimated parameters of the Gamma distribution.
+2. The final Fisher Information Matrix.
+3. The final uncertainty measure.
+
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
